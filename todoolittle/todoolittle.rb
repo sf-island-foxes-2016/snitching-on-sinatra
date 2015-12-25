@@ -4,7 +4,11 @@ require 'pathname'
 
 # Identify the root directory for the application
 # so that we can later reference files from APP_ROOT
-APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
+APP_ROOT = Pathname.new(File.expand_path('../', __FILE__))
+
+puts "==============================="
+puts APP_ROOT
+puts "==============================="
 
 # Configure the database
 database_config = { :adapter  =>  "sqlite3",

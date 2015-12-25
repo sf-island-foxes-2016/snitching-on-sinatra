@@ -1,6 +1,6 @@
 class CreateTodos < ActiveRecord::Migration
   def change
-    create_Table :dodos do |t|
+    create_table :todos do |t|
       t.string :description
     end
   end
