@@ -1,3 +1,5 @@
+# controller
+
 require 'sinatra'
 
 get '/' do
@@ -13,6 +15,11 @@ get '/greetings/:name' do
 end
 
 get '/cities/:city/greetings/:name' do
-  "Hey #{params[:name]}! Welcome to the #{params[:city]} greeting page!"
-    "<h1>I love the holidays!</h1>"
+  @name = params[:name]
+  erb :greeting
+end
+
+post '/custom_greetings' do
+  @greeting = params[:greeting]
+  erb :greeting
 end
